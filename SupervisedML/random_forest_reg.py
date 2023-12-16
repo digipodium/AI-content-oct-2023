@@ -66,9 +66,11 @@ gridSearch = GridSearchCV(model,
 #%%
 results = gridSearch.fit(X, y)
 #%%
+result_df = pd.DataFrame(results.cv_results_)
 
+reg= results.best_estimator_
 
-
+reg.predict(X[:10])
 
 
 

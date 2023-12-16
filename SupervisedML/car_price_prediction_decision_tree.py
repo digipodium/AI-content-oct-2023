@@ -77,6 +77,7 @@ sns.histplot(temp_df, x='Price2', bins=range(0, 250,10),
 sns.histplot(temp_df, x='pred', bins=range(0, 250,10),
              alpha=.1, kde=True, color='red')
 data = f'Multiple Linear Reg.\nScore = {score:.2f}\nMAE = {mae:.2f}\nMSE = {mse:.2f}'
+print(data)
 plt.show()
 
 
