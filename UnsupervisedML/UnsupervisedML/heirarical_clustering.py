@@ -15,10 +15,15 @@ plt.show()
 X = df[['x']]
 linkage = hierarchy.linkage(X, 'ward')
 plt.figure()
+
 dn = hierarchy.dendrogram(linkage)
 plt.show()
 #%%
+model = AgglomerativeClustering(n_clusters=2)
+df['pred'] = model.fit_predict(X)
 #%%
+sns.scatterplot(data=df, x='x', y='y', hue='pred')
+plt.show()
 #%%
 #%%
 #%%
